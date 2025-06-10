@@ -1,1 +1,28 @@
+install.packages("telegram.bot")
+install.packages("tidyverse")
+install.packages("lubridate")
+install.packages("nycflights13")
+install.packages("hms")
+install.packeges("cronR")
+install.packages("miniUI")
+install.packages("shiny")
+install.packages("shinyFiles")
+#установили всякое
+library(telegram.bot)
+library(tidyverse)
+library(lubridate)
+library(nycflights13)
+library(hms)
+library(cronR)
+library(miniUI)
+library(shiny)
+library(shinyFiles)
+#подключили всякое
+bot <- Bot(token = "7794204181:AAEBqUAfL87naNQQcuQCHJQe9NBjioznp0E")
 
+print(bot$getMe())
+
+cmd <- cron_rscript("/path/to/file/create_file.R")
+ 
+cron_add(command = cmd, frequency = '/30 * * * *', at = "9:00" , id = 'send_message', description = "send message")
+send_message = bot$sendMessage(chat_id = -4823316576, text = "салат",parse_mode = NULL )

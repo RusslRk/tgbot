@@ -18,7 +18,7 @@ library(miniUI)
 library(shiny)
 library(shinyFiles)
 #подключили всякое
-bot <- Bot(token = "7794204181:AAEBqUAfL87naNQQcuQCHJQe9NBjioznp0E")
+bot <- Bot(token = " ")
 
 print(bot$getMe())
 
